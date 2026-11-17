@@ -1,0 +1,7 @@
+# macOS
+.DS_Store
+
+# Large DMG installer (724 MB) — never commit it.
+# The downloads/ folder is kept in the repo via downloads/.gitkeep.
+downloads/*
+!downloads/.gitkeep

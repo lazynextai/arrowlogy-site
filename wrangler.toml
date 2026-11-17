@@ -1,0 +1,5 @@
+# Cloudflare Pages — serves this static site straight from the repo root.
+# Deploy (after `wrangler login`) by running `wrangler pages deploy` from this folder.
+name = "arrowlogy"
+compatibility_date = "2026-11-17"
+pages_build_output_dir = "."
