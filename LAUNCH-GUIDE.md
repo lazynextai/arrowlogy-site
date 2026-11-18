@@ -129,6 +129,12 @@ entirely free, and gives you a permanent link like:
 (You only do this once; put the real link in place of `downloads/Arrowlogy-0.2.17-arm64.dmg`
 in `index.html`. The folder itself is kept safely empty in the repo.)
 
+> ✅ **DONE (18 Nov 2026).** The DMG is hosted on GitHub Releases — permanent and free —
+> at `https://github.com/lazynextai/arrowlogy/releases/latest/download/Arrowlogy-0.2.17-arm64.dmg`,
+> and the site's Download button already points there. The only remaining launch step is
+> the Cloudflare deploy (section 2, option A: `wrangler login` then `wrangler pages deploy`)
+> once the Cloudflare account exists.
+
 ---
 
 ## 5. Email: making hello@arrowlogy.com work (free)
