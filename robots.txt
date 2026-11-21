@@ -1,0 +1,5 @@
+# Arrowlogy — https://arrowlogy.com
+User-agent: *
+Allow: /
+
+Sitemap: https://arrowlogy.com/sitemap.xml

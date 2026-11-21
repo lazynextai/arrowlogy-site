@@ -262,14 +262,20 @@
         <a class="btn btn-primary btn-xl" href="https://github.com/lazynextai/arrowlogy/releases/latest/download/Arrowlogy-0.2.17-arm64.dmg">Download for macOS</a>
         <!-- The DMG is hosted on the GitHub release: https://github.com/lazynextai/arrowlogy/releases/latest/download/Arrowlogy-0.2.17-arm64.dmg (Cloudflare Pages caps files at 25 MB). -->
 
-        <p class="download-note">
-          This is a locally-built, unsigned build — the very first launch. When macOS asks to confirm,
-          that's expected; right-click the app and choose <b>Open</b> the first time, and you're set.
-          Official signing and a friendlier installer are on the way.
-        </p>
+        <div class="install-free" id="install-mac">
+          <h3 class="install-free-title">Install on Mac (free / unsigned)</h3>
+          <ol class="install-free-steps">
+            <li>Open the DMG and drag <b>Arrowlogy</b> into <b>Applications</b>.</li>
+            <li>In Finder → Applications, <b>right-click Arrowlogy → Open</b>, then click <b>Open</b> again.</li>
+            <li>Or: System Settings → Privacy &amp; Security → <b>Open Anyway</b>.</li>
+          </ol>
+          <p class="download-note">
+            This build is ad-hoc signed and <b>not</b> Apple-notarized. The first-launch Gatekeeper warning is expected on the free distribution path. We do not claim Developer ID or notarization.
+          </p>
+        </div>
 
         <p class="download-more">
-          Coming soon: automatic updates, installer improvements, and more guides for getting started.
+          Auto-updates check GitHub releases for this channel. Optional paid Apple signing can come later — not required to use Arrowlogy™ today.
         </p>
       </div>
     </section>
@@ -281,7 +287,7 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <img src="assets/img/arrowlogy-icon.png" alt="" width="24" height="24" />
-        <span>Arrowlogy</span>
+        <span>Arrowlogy™</span>
       </div>
 
       <p class="footer-links">
@@ -289,12 +295,12 @@
       </p>
 
       <p class="footer-attribution">
-        Arrowlogy is built on
+        Arrowlogy™ is built on
         <a href="https://github.com/0xsline/OpenChatCut" target="_blank" rel="noopener noreferrer">OpenChatCut</a>
         (AGPL-3.0). Both projects are independent.
       </p>
 
-      <p class="footer-copy">&copy; <span id="year">2026</span> Arrowlogy</p>
+      <p class="footer-copy">&copy; <span id="year">2026</span> Arrowlogy™</p>
     </div>
   </footer>
 

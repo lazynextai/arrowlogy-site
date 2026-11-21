@@ -1,5 +1,13 @@
 # Arrowlogy Launch Guide
 
+> **Status (2026-11-21 — 100% free path):** Site is live at **https://arrowlogy.com** (and www) on the
+> admin@arrowlogy.com Cloudflare Pages project (`arrowlogy-cts.pages.dev`). Domain
+> connect is done — see `~/Desktop/CONNECT-ARROWLOGY-COM.md`. DMG download points at
+> GitHub release v0.2.17. Branded app at `/Applications/Arrowlogy.app` (ad-hoc / Gatekeeper right-click Open).
+> **`hello@arrowlogy.com`** alias works. Brand: **Arrowlogy™** (common-law; no USPTO paid filing).
+> **Deferred paid-only:** Apple Developer (~$99) notarization, USPTO ® (~$500+), App Store.
+> Google Workspace: monitor billing only — do not upgrade plans. DMARC stays at `p=none`.
+
 A plain-English walkthrough for the person who owns the business but not a terminal.
 This guide was written by your AI assistant on 17 November 2026, after the site was
 made deployment-ready. Nothing here requires more than a web browser and a free account.
@@ -169,7 +177,7 @@ you paste them at Spaceship; mail starts flowing within a few hours.*
 - [ ] **Final copy pass.** Read every line on the page once, out loud: typos, claims that
   must be true ("no account required"), and the download link.
 - [ ] **Upload the DMG + update the button** (section 4), then click the button yourself.
-- [ ] **Email test.** Send a message to hello@arrowlogy.com and check it arrives.
+- [x] **Email test.** External delivery to hello@arrowlogy.com confirmed (2026-11-21).
 - [ ] **DNS + HTTPS test.** Visit https://arrowlogy.com from your laptop *and* your phone.
 
 ---

@@ -752,8 +752,30 @@ a:hover { text-decoration: underline; }
 }
 .section-download .section-lead { margin-left: auto; margin-right: auto; }
 
+.install-free {
+  margin: 28px auto 0;
+  max-width: 620px;
+  text-align: left;
+}
+.install-free-title {
+  margin: 0 0 12px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text);
+}
+.install-free-steps {
+  margin: 0 0 14px;
+  padding-left: 1.35em;
+  color: var(--muted);
+  font-size: 14.5px;
+  line-height: 1.55;
+}
+.install-free-steps li { margin-bottom: 0.45em; }
+.install-free-steps b { color: var(--text); font-weight: 600; }
+
 .download-note {
-  margin: 22px auto 0;
+  margin: 0 auto;
   max-width: 620px;
   color: var(--muted);
   font-size: 14.5px;

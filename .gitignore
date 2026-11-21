@@ -1,7 +1,8 @@
-# macOS
-.DS_Store
 
+!downloads/.gitkeep.wrangler/
 # Large DMG installer (724 MB) — never commit it.
 # The downloads/ folder is kept in the repo via downloads/.gitkeep.
+# macOS
+.DS_Store
 downloads/*
-!downloads/.gitkeep
+node_modules/
