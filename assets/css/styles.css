@@ -818,6 +818,11 @@ a:hover { text-decoration: underline; }
   font-size: 13.5px;
   max-width: 620px;
 }
+.footer-attribution a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.footer-attribution a:hover { color: #fff; }
 .footer-copy { margin: 8px 0 0; color: var(--muted); font-size: 13px; }
 
 /* ---------- reveal animation (progressive enhancement — only when JS is on) ---------- */
