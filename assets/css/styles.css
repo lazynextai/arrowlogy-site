@@ -790,6 +790,33 @@ a:hover { text-decoration: underline; }
   font-size: 14px;
 }
 
+/* ---------- support / pricing ---------- */
+.section-alt .section-lead { max-width: 620px; margin-left: auto; margin-right: auto; text-align: center; }
+.support-note {
+  margin: 30px auto 0;
+  max-width: 620px;
+  color: var(--muted);
+  font-size: 15.5px;
+  text-align: center;
+  background: rgba(255, 224, 16, 0.05);
+  border: 1px solid rgba(255, 224, 16, 0.18);
+  border-radius: var(--radius-sm);
+  padding: 16px 20px;
+}
+.support-note a {
+  color: var(--accent);
+  font-weight: 600;
+  text-underline-offset: 2px;
+}
+.support-note a:hover { text-decoration: underline; }
+.support-fineprint {
+  margin: 14px auto 0;
+  max-width: 620px;
+  color: var(--muted);
+  font-size: 13.5px;
+  text-align: center;
+}
+
 /* ---------- footer ---------- */
 .site-footer {
   border-top: 1px solid var(--border);
