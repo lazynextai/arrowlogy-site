@@ -2,4 +2,12 @@
 User-agent: *
 Allow: /
 
+# Legal / policy documents
+Allow: /terms
+Allow: /privacy
+Allow: /refunds
+Allow: /acceptable-use
+Allow: /security
+Allow: /subprocessors
+
 Sitemap: https://arrowlogy.com/sitemap.xml

@@ -1,49 +1,56 @@
 # Arrowlogy Site
 
-Static marketing / download site for **Arrowlogy** — the free, open-source, offline-first AI video editor for macOS. Live at **[https://arrowlogy.com](https://arrowlogy.com)**.
+Static marketing site for **Arrowlogy** — a browser-based video editor with cloud processing, currently in private beta. Live at **[https://arrowlogy.com](https://arrowlogy.com)**.
 
 ## What is this?
 
-A plain static website (no build step, no framework): `index.html` + `assets/` (CSS, images, JS). The page’s main jobs are:
+A plain static website (no build step, no framework): HTML + `assets/` (CSS, images, JS). The page's jobs are:
 
-- Introduce the product and its features
-- Link to the macOS DMG download
-- Point at the GitHub repo and licence (AGPL-3.0, built on OpenChatCut)
+- Explain the browser editor and the cloud-processing model
+- Collect private-beta waitlist requests via `mailto:hello@arrowlogy.com?subject=Arrowlogy%20beta`
+- Publish the legal pack (Terms, Privacy, Refunds, Acceptable Use, Security, Subprocessors)
+
+There is **no macOS download** on this site. The editor is not publicly live yet, and no page should claim otherwise.
 
 ## Deploy
 
-Hosted on **Cloudflare Pages** (project `arrowlogy`, domain `arrowlogy.com`). From this folder, with Node 24.22.1 via fnm:
+Hosted on **Cloudflare Pages** (project `arrowlogy`, domain `arrowlogy.com`). From this folder:
 
 ```sh
-fnm exec --using=24.22.1 -- wrangler pages deploy
+npx wrangler pages deploy --project-name arrowlogy --branch main
 ```
 
-Config lives in [`wrangler.toml`](wrangler.toml) — `pages_build_output_dir = "."` means the repo root is the site root. No build command needed.
+Config lives in [`wrangler.toml`](wrangler.toml) — `pages_build_output_dir = "."` means the repo root is the site root. No build command needed. Cloudflare Pages serves `terms.html` at `/terms` (clean URLs), so no redirect rules are needed for the legal pages.
 
-## DMG download link
+## Pages
 
-The download button points at the **GitHub release asset**, not this repo:
+| File | URL |
+|---|---|
+| `index.html` | `/` |
+| `terms.html` | `/terms` |
+| `privacy.html` | `/privacy` |
+| `refunds.html` | `/refunds` |
+| `acceptable-use.html` | `/acceptable-use` |
+| `security.html` | `/security` |
+| `subprocessors.html` | `/subprocessors` |
 
-```
-https://github.com/lazynextai/arrowlogy/releases/latest/download/Arrowlogy-0.2.18-arm64.dmg
-```
+`robots.txt` and `sitemap.xml` list all of the above. When you add a page, update both.
 
-Cloudflare Pages caps files at 25 MB, so the ~700 MB DMG is hosted on the [Arrowlogy GitHub Releases](https://github.com/lazynextai/arrowlogy/releases). To bump the version, update the link + the release asset name in `index.html` (search for `releases/latest/download/`).
+## Legal status
+
+Every legal page carries the line **"Last updated 26 November 2026 · Beta — pending counsel review"** and states plainly that it has not been reviewed by a lawyer. Governing law and jurisdiction are placeholders marked for counsel. See `~/.openchatcut/WEB-PIVOT/LEGAL-PACK.md` for what is published and what counsel must finalise.
 
 ## Updating copy
 
-Everything (copy, hero, feature list, footer attribution) is hand-written in `index.html`. Edit it directly, then commit and push — Cloudflare Pages auto-deploys from `main`.
+Everything is hand-written HTML. Edit, commit, deploy. Keep the brand spelling exactly **Arrowlogy**.
 
 ## Analytics
 
-- Tool: **Cloudflare Web Analytics** (free tier).
-- Install method: manual JS snippet in `index.html` (see `data-cf-beacon` token near the top). It is a standalone RUM beacon, independent of zone/dashboard settings.
-- Where to view: Cloudflare dashboard → **Analytics → Web analytics** (admin@arrowlogy.com account), or directly:
-  `https://dash.cloudflare.com/<account>/web-analytics`
-- Note: the beacon excludes EU visitors by default (opt-in consent), so traffic from the EU may be undercounted — expected behaviour.
+- **Cloudflare Web Analytics** (free tier), manual beacon in each page's `<head>`.
+- The beacon excludes EU visitors by default (opt-in consent), so EU traffic may be undercounted.
+- View in the Cloudflare dashboard → **Analytics → Web analytics**.
 
 ## Other files
 
-- [`LAUNCH-GUIDE.md`](LAUNCH-GUIDE.md) — plain-English walkthrough of hosting/deploy decisions.
-- `robots.txt`, `sitemap.xml` — SEO basics for `arrowlogy.com`.
-- `.github/workflows/deploy.yml` — optional GitHub Pages pipeline (not the primary deploy path).
+- `LAUNCH-GUIDE.md` — historical hosting notes from the desktop-app era (not current).
+- `_redirects` — sends stale doc paths to the home page so old Markdown isn't publicly served.

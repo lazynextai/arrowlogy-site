@@ -1,0 +1,10 @@
+# Stale documents from the desktop-app era. Do not serve them publicly.
+/README.md        /            301
+/LAUNCH-GUIDE.md  /            301
+
+# Old desktop-era routes → the section that covers the same thing now.
+/pricing          /#pricing   301
+/download         /#beta      301
+/downloads        /#beta      301
+/install-mac      /#beta      301
+/downloads/*      /#beta      301
