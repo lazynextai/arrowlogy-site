@@ -1,8 +1,10 @@
-name: Deploy to GitHub Pages
+# Production host is Cloudflare Pages (arrowlogy.com → arrowlogy-cts.pages.dev).
+# GitHub Pages is NOT enabled on this repo, so the old push-triggered deploy
+# failed on every commit and emailed failure noise. Keep this file for a
+# manual fallback only — do not re-enable push triggers unless Pages is set up.
+name: Deploy to GitHub Pages (manual only)
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
